@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+requests
+streamlit
+nest_asyncio
+ollama
