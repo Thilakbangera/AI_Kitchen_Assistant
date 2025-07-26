@@ -47,8 +47,6 @@ Enter the ingredients you have — e.g., `egg, tomato` — and get:
 
 ## 📁 Folder Structure
 
-```
-
 kitch/
 ├── app.py                  # Main Streamlit app
 ├── tavily\_utils.py         # Handles Tavily AI interaction
