@@ -1,32 +1,124 @@
+```markdown
 # 🍽 AI Kitchen Assistant
 
-A text-enabled cooking companion powered by *FastAPI, **Streamlit, **Whisper, and **LLaMA 3. This assistant helps you **generate recipes, **chat with an AI chef, and even **transcribe voice commands* to offer personalized cooking suggestions.
+Your smart AI-powered cooking companion that helps you:
+- 👨‍🍳 Chat with an AI Chef
+- 🍲 Find recipes based on ingredients you have
+- 💡 Get cooking tips, substitutions, and techniques
+
+Built with **Streamlit**, powered by **Spoonacular API** and **Tavily AI Chat API**.
 
 ---
 
-## 🚀 Features
+## 🌟 Features
 
-- 🧾 *Ingredient-Based Recipe Search* via Spoonacular API
-- 🤖 *Chat with an AI Chef* powered by Ollama (LLaMA 3 model)
-- ⚡ FastAPI backend with fully interactive Streamlit frontend
-- 🔐 Secrets management using st.secrets for API key security
+### ✅ AI Chef (Tavily)
+Ask questions like:
+- *"How do I boil an egg?"*
+- *"What can I substitute for olive oil?"*
+- *"How to cook pasta perfectly?"*
+
+### ✅ Recipe Finder (Spoonacular)
+Enter the ingredients you have — e.g., `egg, tomato` — and get:
+- Matching recipes
+- ✅ Used ingredients
+- ❌ Missing ingredients
+- 🔗 Recipe link
 
 ---
 
-## 🧠 Tech Stack
+## 📸 Demo
 
-| Layer        | Technology                        |
-|--------------|-----------------------------------|
-| 🧠 AI Models | Whisper (speech → text), Ollama LLaMA3 (chat) |
-| 🧪 Backend    | FastAPI, Uvicorn                  |
-| 🎛 Frontend  | Streamlit                         |
-| 📡 API       | Spoonacular API (for recipes)     |
+![Demo Screenshot](screenshot.png)  
+*(Add a real screenshot from your app if available)*
+
+---
+
+## 🚀 Tech Stack
+
+| Tool            | Purpose                               |
+|-----------------|----------------------------------------|
+| Python          | Backend logic                          |
+| Streamlit       | Frontend Web UI                        |
+| Spoonacular API | Recipe suggestions                     |
+| Tavily API      | AI-powered cooking chat                |
 
 ---
 
 ## 📁 Folder Structure
-ai-kitchen-assistant/
-├── app.py                  # FastAPI backend server
-├── frontend.py             # Streamlit frontend interface
-├── requirements.txt        # Project dependencies
-├── secrets.toml            # Spoonacular API key config
+
+```
+
+kitch/
+├── app.py                  # Main Streamlit app
+├── tavily\_utils.py         # Handles Tavily AI interaction
+├── requirements.txt        # Dependencies
+└── .streamlit/
+└── secrets.toml        # API keys (not committed to GitHub)
+
+````
+
+---
+
+## 🔑 Setup Instructions
+
+### 1️⃣ Clone the Repo
+
+```bash
+git clone https://github.com/YOUR_USERNAME/ai-kitchen-assistant.git
+cd ai-kitchen-assistant
+````
+
+### 2️⃣ Create `.streamlit/secrets.toml`
+
+```toml
+# .streamlit/secrets.toml
+SPOONACULAR_API_KEY = "your_spoonacular_api_key"
+TAVILY_API_KEY = "your_tavily_api_key"
+```
+
+> ⚠️ Do not commit this file to GitHub!
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Run the App
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📦 Requirements
+
+```text
+streamlit
+requests
+```
+
+---
+
+## 🔐 API Keys
+
+* Get your **Spoonacular API Key**: [https://spoonacular.com/food-api](https://spoonacular.com/food-api)
+* Get your **Tavily API Key**: [https://app.tavily.com/](https://app.tavily.com/)
+
+---
+
+## ✨ Example Queries
+
+* `"How to make a fluffy omelette?"`
+* `"What can I cook with eggs, tomatoes, and cheese?"`
+* `"What is the best way to bake a cake?"`
+
+---
+
+## 🙌 Author
+
+**Thilak Bangera**
+🔗 [LinkedIn](https://www.linkedin.com/in/thilak-bangera-b37629318)
+💻 [GitHub](https://github.com/Thilakbangera)
